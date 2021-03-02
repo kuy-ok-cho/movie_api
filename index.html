@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <div class="serach-box">
+      <input type="text" / class="searchInput">
+      <button type="button" class="sendBtn">검색</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        function searchMovie() {
+          let searchResult = $(".searchInput").val();
+          if (!searchResult) {
+            alert("검색어를 입력해 주세요.");
+            return false;
+          }
+          location.href = "/movie_api/search.html?key=" + searchResult;
+        }
+
+        $(".sendBtn").click(function () {
+          searchMovie();
+        });
+        //press enter
+        document.addEventListener("keydown", function (e) {
+          const keyCode = e.keyCode;
+          if (keyCode == 13) {
+            searchMovie();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
