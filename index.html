@@ -5,13 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie App</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
   </head>
   <body>
-    <div class="serach-box">
-      <input type="text" / class="searchInput">
-      <button type="button" class="sendBtn">검색</button>
-    </div>
+    <div class="wrap"> 
+        <!-- start header -->
+      <div class="header">
+        <!-- start headeCenter -->
+        <div class="center headCenter">
 
+          <div class="leftHeader">
+            <a href="#"><em>
+              Movie Search</em>
+            </a>
+          </div>
+          <!-- end of left header -->
+
+          <div class="rightHeader">
+            <ul class="member">
+              <a href="#"><li>Login</li></a>
+              <a href="#"><li>Join</li></a>
+            </ul>
+          </div>
+          <!-- end of rightHeader -->
+
+
+        </div>
+        <!-- end of headerCenter -->
+      </div>
+      <!-- end of header -->
+
+
+
+      <div class="center">
+
+        <div class="search-box">
+          <input type="text" / class="searchInput"
+          placeholder="검색어를 입력해주세요.">
+          <button type="button" class="sendBtn">
+            <i class="fa fa-search"></i>
+          </button>
+
+
+          <div class="container clear"></div>
+        <!-- end of container÷ -->
+        
+        <div class="numContainer">
+          <div class="numBtns">
+            <button type="button" class="prev">prev</button>
+            <button type="button" class="pageNum" value="1">1</button>
+            <button type="button" class="pageNum" value="2">2</button>
+            <button type="button" class="pageNum" value="3">3</button>
+            <button type="button" class="pageNum" value="4">4</button>
+            <button type="button" class="pageNum" value="5">5</button>
+            <button type="button" class="next">next</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- end of center -->
+    </div>
+    <!-- end of wrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
@@ -36,5 +96,6 @@
         });
       });
     </script>
+    <script src="js/recent.js"></script>
   </body>
 </html>
