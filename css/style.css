@@ -1,47 +1,115 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-body{ background-image: url(http://file.instiz.net/data/cached_img/upload/3/9/0/3907e2b9a795f6076209db46cd600ebe.gif);
-background-repeat: no-repeat; background-size: cover;}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  background-image: url(http://file.instiz.net/data/cached_img/upload/3/9/0/3907e2b9a795f6076209db46cd600ebe.gif);
+  background-repeat: repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+}
 
-/* header style?\ */
-.header {background-color: rgba(146, 197, 245, 0.6);display:flex;}
-.header .headCenter{display:flex; justify-content: space-between;}
-.header .headCenter .leftHeader{font-size:45px;
-font-family:'Lobster'; padding:20px; }
-.header .headCenter .leftHeader a{color:rgb(25, 76, 105);}
-.header .headCenter .rightHeader{display:flex;}
-.header .headCenter .rightHeader .member{display: flex;
-margin:auto;} 
-.header .headCenter .rightHeader .member a{font-size: 30px; display: flex; padding-left: 10px;
-font-family: "Lobster";} 
-
-
-
-
-
-
-
+/* header style? */
+.header {
+  background-color: rgba(146, 197, 245, 0.6);
+  display: flex;
+}
+.header .headCenter {
+  display: flex;
+  justify-content: space-between;
+}
+.header .headCenter .leftHeader {
+  font-size: 45px;
+  font-family: "Lobster";
+  padding: 20px;
+}
+.header .headCenter .leftHeader a {
+  color: rgb(25, 76, 105);
+}
+.header .headCenter .rightHeader {
+  display: flex;
+}
+.header .headCenter .rightHeader .member {
+  display: flex;
+  margin: auto;
+}
+.header .headCenter .rightHeader .member a {
+  font-size: 30px;
+  display: flex;
+  padding-left: 10px;
+  font-family: "Lobster";
+}
 
 /* search box style */
-.search-box{position: absolute; 
-_top:50%; _right:42.5%;}
-.search-box .searchInput {font-size:20px; margin:5px;
-border: 2px solid black; padding:10px; border-radius: 5px;}
-.search-box .sendBtn {font-size:20px; padding:10px;
-border: 2px solid black; background-color: white;
-color:black; border-radius: 5px;}
+.search-box {
+  position: absolute;
+  _top: 50%;
+  _right: 42.5%;
+}
+.search-box .search {
+  margin: 115px;
+  text-align: center;
+  position: relative;
+  left: 3%;
+}
+.search-box .searchInput {
+  font-size: 25px;
+  margin: 5px;
+  border: 1px solid rgb(25, 76, 105);
+  padding: 15px 140px 15px 15px;
+  border-radius: 8px;
+}
+.search-box .sendBtn {
+  font-size: 25px;
+  padding: 15px;
+  border: 1px solid rgb(25, 76, 105);
+  background-color: skyblue;
+  color: black;
+  border-radius: 8px;
+}
+.search-box .searchInput::placeholder {
+  color: #ddd;
+}
 
-.clear:after{display: block; clear:both; content:'';}
-.container{width:100%; height: auto; margin:auto; max-width: 980px;}
-.recent-movie-wrap{float:left; width:20%; padding:10px;}
-.recent-movie-wrap img{width:100%;}
-.recent-movie-wrap img h3{font-size:12px;
-    white-space: nowrap; text-overflow: ellipsis; width:100%; 
-    overflow:hidden;}
+.clear:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 980px;
+}
+.recent-movie-wrap {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+.recent-movie-wrap img {
+  width: 100%;
+}
+.recent-movie-wrap img h3 {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
 
-.numContaine{width:100%; height: auto; _margin:auto;
-max-width: 980px; margin:20px auto 50px;}
+.numContaine {
+  width: 100%;
+  height: auto;
+  _margin: auto;
+  max-width: 980px;
+  margin: 20px auto 50px;
+}
 
-.loading{width:100%; height:608px; display:flex; justify-content: center; align-items: center;}
+.loading {
+  width: 100%;
+  height: 608px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
