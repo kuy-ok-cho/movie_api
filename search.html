@@ -5,56 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie App</title>
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search.css" />
   </head>
+
   <body>
     <div class="wrap">
-      <!-- <div class="movie_box">
-        <img src="" alt="" />
-        <h2>제목 :</h2>
-        <p>감독 :</p>
-        <p>개봉 :</p>
-        <p>평점 :</p>
-      </div> -->
-    </div>
+      <!-- start header -->
+      <div class="header">
+        <!-- start headeCenter -->
+        <div class="center headCenter">
+          <div class="leftHeader">
+            <a href="#"><em> Movie Search</em> </a>
+          </div>
+          <!-- end of left header -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        let searchValue = document.location.href.split("=")[1];
-        let decodeValue = decodeURI(searchValue);
-        console.log(decodeValue);
+          <div class="rightHeader">
+            <ul class="member">
+              <a href="#"><li>Login</li></a>
+              <a href="#"><li>Join</li></a>
+            </ul>
+          </div>
+          <!-- end of rightHeader -->
+        </div>
+        <!-- end of headerCenter -->
+      </div>
+      <!-- end of header -->
 
-        $.ajax({
-          type: "POST",
-          url: "/movie_api/data/api.php",
-          data: {
-            searchValue: decodeValue,
-          },
-          success: function (data) {
-            let obj = JSON.parse(data);
-            //console.log(obj);
-            //console.log(obj.items);
-            if (obj.items.length == 0) {
-              alert("데이터가 없습니다.");
-              location.href = "/movie_api/index.html";
-            }
+      <div class="center resultCenter">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          $(function () {
+            let searchValue = document.location.href.split("=")[1];
+            let decodeValue = decodeURI(searchValue);
+            console.log(decodeValue);
 
-            let itemContents = [];
-            $.each(obj.items, function (i, item) {
-              // console.log(item.title);
-              let itemHTML = `<div class="movie_box">
+            $.ajax({
+              type: "POST",
+              url: "/movie_api/data/api.php",
+              data: {
+                searchValue: decodeValue,
+              },
+              success: function (data) {
+                let obj = JSON.parse(data);
+                //console.log(obj);
+                //console.log(obj.items);
+                if (obj.items.length == 0) {
+                  alert("데이터가 없습니다.");
+                  location.href = "/movie_api/index.html";
+                }
+
+                let itemContents = [];
+                $.each(obj.items, function (i, item) {
+                  // console.log(item.title);
+                  let itemHTML = `<div class="movie_box">
                               <img src="${item.image}" alt="" />
                               <h2>제목 :${item.title}</h2>
                               <p>감독 :${item.director}</p>
                               <p>개봉 :${item.pubDate}</p>
                               <p>평점 :${item.userRating}</p>
                             </div>`;
-              itemContents.push($(itemHTML).get(0));
+                  itemContents.push($(itemHTML).get(0));
+                });
+                $(".wrap").append(itemContents);
+              },
             });
-            $(".wrap").append(itemContents);
-          },
-        });
-      });
-    </script>
+          });
+        </script>
+      </div>
+      <!-- end of resultCenter -->
+    </div>
+    <!-- end of wrap -->
   </body>
 </html>

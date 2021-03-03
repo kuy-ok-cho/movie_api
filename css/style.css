@@ -2,16 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
 body {
-  background-image: url(http://file.instiz.net/data/cached_img/upload/3/9/0/3907e2b9a795f6076209db46cd600ebe.gif);
-  background-repeat: repeat;
-  background-size: 50%;
+  _background-image: url(https://obj-sg.thewiki.kr/data/4865726d696f6e6520616e642068657220506174726f6e75732e676966.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
+  margin-top: 20px;
+}
+
+html {
+  display: block;
 }
 
 /* header style? */
 .header {
-  background-color: rgba(146, 197, 245, 0.6);
+  background-color: rgba(107, 92, 103, 0.6);
   display: flex;
 }
 .header .headCenter {
@@ -21,10 +27,10 @@ body {
 .header .headCenter .leftHeader {
   font-size: 45px;
   font-family: "Lobster";
-  padding: 20px;
+  padding: 18px;
 }
 .header .headCenter .leftHeader a {
-  color: rgb(25, 76, 105);
+  color: rgb(214, 50, 126);
 }
 .header .headCenter .rightHeader {
   display: flex;
@@ -38,39 +44,47 @@ body {
   display: flex;
   padding-left: 10px;
   font-family: "Lobster";
+  color: rgb(214, 50, 126);
 }
 
-/* search box style */
-.search-box {
-  position: absolute;
-  _top: 50%;
-  _right: 42.5%;
-}
 .search-box .search {
-  margin: 115px;
+  margin: 20% 0;
   text-align: center;
-  position: relative;
   left: 3%;
 }
 .search-box .searchInput {
   font-size: 25px;
   margin: 5px;
-  border: 1px solid rgb(25, 76, 105);
-  padding: 15px 140px 15px 15px;
+  border: 2px solid rgb(180, 171, 175);
+  padding: 10px 350px 10px 10px;
   border-radius: 8px;
 }
 .search-box .sendBtn {
   font-size: 25px;
-  padding: 15px;
-  border: 1px solid rgb(25, 76, 105);
-  background-color: skyblue;
-  color: black;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid rgb(180, 171, 175);
+  background-color: rgb(180, 171, 175);
+  color: #fff;
   border-radius: 8px;
+}
+.search-box .sendBtn:hover {
+  background-color: rgb(167, 44, 101);
+  color: #fff;
 }
 .search-box .searchInput::placeholder {
   color: #ddd;
 }
-
+.tit {
+  text-align: center;
+  font-family: "Lobster";
+  font-size: 40px;
+  background-color: rgba(107, 92, 103, 0.6);
+  padding: 10px;
+  text-align: center;
+  color: rgb(214, 50, 126);
+  border: 2px solid rgb(107, 92, 103);
+  margin: 20% 0 5%;
+}
 .clear:after {
   display: block;
   clear: both;
@@ -81,31 +95,61 @@ body {
   height: auto;
   margin: auto;
   max-width: 980px;
+  flex-wrap: wrap;
 }
 .recent-movie-wrap {
   float: left;
-  width: 20%;
-  padding: 10px;
+  width: 30%;
+  border: 3px solid rgb(107, 92, 103);
+  margin: 0 10px 5%;
+}
+.recent-movie-wrap:hover {
+  background-color: rgb(235, 135, 182);
+}
+.recent-movies {
 }
 .recent-movie-wrap img {
   width: 100%;
 }
-.recent-movie-wrap img h3 {
-  font-size: 12px;
+.recent-movie-wrap h3 {
+  font-size: 30px;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(107, 92, 103, 0.7);
+  font-family: "Gamja Flower";
+  color: rgb(255, 255, 255);
 }
-
-.numContaine {
+.numContainer {
   width: 100%;
   height: auto;
-  _margin: auto;
-  max-width: 980px;
-  margin: 20px auto 50px;
+  margin: 20px;
+  text-align: center;
 }
-
+.numBtns {
+}
+.numBtns button {
+  font-size: 28px;
+  font-family: "Gamja Flower";
+  margin: 20px;
+  padding: 15px;
+  background-color: rgb(180, 171, 175);
+  color: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(179, 212, 241, 0.6);
+}
+.numBtns button:hover {
+  background-color: rgb(167, 108, 108);
+  color: #fff;
+}
+.numBtns button.active,
+.numBtns button.arrow {
+  background: rgb(167, 108, 108);
+  color: #fff;
+}
 .loading {
   width: 100%;
   height: 608px;

@@ -1,16 +1,18 @@
-$(function(){
+$(function () {
+  let currentPage = 1;
+  const pageNumLength = $(".numBtns button.pageNum").length;
 
-  let currentPage = 0;
-
-  function getData(page){
+  function getData(page) {
     let getDatas = [];
     $.ajax({
-      url:'https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc&limit=10&page=' + page,
-      success:function(data){
+      url:
+        "https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc&limit=9&page=" +
+        page,
+      success: function (data) {
         //console.log(data.data.movies[0].title);
-        for(let i = 0; i < data.data.movies.length; i++){
-          if(data.data.movies[i].title == ''){
-            data.data.movies[i].title = 'No Title';
+        for (let i = 0; i < data.data.movies.length; i++) {
+          if (data.data.movies[i].title == "") {
+            data.data.movies[i].title = "No Title";
           }
           let recentHTML = `<div class="recent-movie-wrap">
                             <div class="recent-movies">
@@ -22,27 +24,60 @@ $(function(){
                               </h3>
                             </div>
                           </div>`;
-                          getDatas += recentHTML;
+          getDatas += recentHTML;
         }
         $(".container").append(getDatas);
-      }
+      },
     });
     currentPage = page;
-    //console.log(typeof(page));
+    //console.log(typeof(currentPage));
   }
 
-  $(".numBtns button.pageNum").click(function(){
-    let btnValue = Number($(this).attr('value'));
+  $(".numBtns button.pageNum").click(function () {
+    let btnValue = Number($(this).attr("value"));
     //console.log(btnValue);
     $(".recent-movie-wrap").remove();
     $(".loading").show();
     getData(btnValue);
+
+    let btnIdx = $(this).index();
+
+    $(".numBtns button").removeClass("active");
+    $(".numBtns button").eq(btnIdx).addClass("active");
   });
 
-  getData(1);
+  function goToPrevNext(a, b) {
+    if (currentPage == a) {
+      return false;
+    } else {
+      $(".recent-movie-wrap").remove();
+      getData(b);
+      $(".loading").show();
+      $(".numBtns button").removeClass("active");
+      $(".numBtns button").eq(currentPage).addClass("active");
+    }
+  }
 
-  $(document).ajaxComplete(function(){
+  $(".numBtns button.prev").click(function () {
+    goToPrevNext(1, currentPage - 1);
+  });
+
+  $(".numBtns button.next").click(function () {
+    goToPrevNext(pageNumLength, currentPage + 1);
+  });
+
+  $(".numBtns button").eq(1).trigger("click");
+
+  $(document).ajaxComplete(function () {
     $(".loading").hide();
   });
-
 });
+
+// function initSlider() {
+//   $(".recent-movies").slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   });
+// }

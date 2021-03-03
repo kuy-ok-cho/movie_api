@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie App</title>
     <!-- font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- jquery -->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
 
     <!-- CSS Style Link -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    
   </head>
   <body>
-    <div class="wrap"> 
-        <!-- start header -->
+    <div class="wrap">
+      <!-- start header -->
       <div class="header">
         <!-- start headeCenter -->
         <div class="center headCenter">
-
           <div class="leftHeader">
-            <a href="#"><em>
-              Movie Search</em>
-            </a>
+            <a href="#"><em> Movie Search</em> </a>
           </div>
           <!-- end of left header -->
 
@@ -34,43 +38,47 @@
             </ul>
           </div>
           <!-- end of rightHeader -->
-
-
         </div>
-        <!-- end of headerCenter -->
+        <!-- end of headCenter -->
       </div>
       <!-- end of header -->
 
-
-
-      <div class="center">
-
+      <div class="center scBoxCenter">
+        <!-- start of search-box -->
         <div class="search-box">
-
+          <!-- start of search -->
           <div class="search">
-              <input type="text" / class="searchInput"
-              placeholder="검색어를 입력해주세요.">
-              <button type="button" class="sendBtn">
+            <input type="text" / class="searchInput"
+            placeholder="검색어를입력해주세요.">
+            <button type="button" class="sendBtn">
               <i class="fa fa-search"></i>
             </button>
           </div>
+          <!-- end of search-->
+        </div>
+        <!-- end of search-box -->
+      </div>
+      <!-- end of scBoxCenter -->
 
+      <div class="recentTit">
+        <div class="tit">Recent</div>
+      </div>
 
-          <div class="container clear"></div>
+      <div class="center catainCenter">
+        <div class="container"></div>
         <!-- end of container÷ -->
-        
+
         <div class="numContainer">
           <div class="numBtns">
-            <button type="button" class="prev">prev</button>
+            <button type="button" class="prev arrow">prev</button>
             <button type="button" class="pageNum" value="1">1</button>
             <button type="button" class="pageNum" value="2">2</button>
             <button type="button" class="pageNum" value="3">3</button>
             <button type="button" class="pageNum" value="4">4</button>
             <button type="button" class="pageNum" value="5">5</button>
-            <button type="button" class="next">next</button>
+            <button type="button" class="next arrow">next</button>
           </div>
         </div>
-
       </div>
       <!-- end of center -->
     </div>
@@ -100,5 +108,6 @@
       });
     </script>
     <script src="js/recent.js"></script>
+    <!-- <script src="js/slider.js"></script> -->
   </body>
 </html>
