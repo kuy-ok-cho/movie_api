@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie APP</title>
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="plugin/lightslider.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/genre.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- start header -->
+      <div class="header">
+        <!-- start headeCenter -->
+        <div class="center headCenter">
+          <div class="leftHeader">
+            <a href="#"><em> Movie Search</em> </a>
+          </div>
+          <!-- end of left header -->
+
+          <div class="rightHeader">
+            <ul class="member">
+              <a href="#"><li>Login</li></a>
+              <a href="#"><li>Join</li></a>
+            </ul>
+          </div>
+          <!-- end of rightHeader -->
+        </div>
+        <!-- end of headCenter -->
+      </div>
+      <!-- end of header -->
+
+      <div class="center scBoxCenter">
+        <!-- start of search-box -->
+        <div class="search-box">
+          <!-- start of search -->
+          <div class="search">
+            <input type="text" / class="searchInput"
+            placeholder="검색어를입력해주세요.">
+            <button type="button" class="sendBtn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <!-- end of search-->
+        </div>
+        <!-- end of search-box -->
+      </div>
+      <!-- end of scBoxCenter -->
+
+      <div class="menu">
+        <div class="center menuCenter">
+          <div class="recentNav">
+            <a href="index.html">Recent</a>
+          </div>
+          <div class="best"><a href="#">Best</a></div>
+          <div class="genre"><a href="genre.html" class="active">Genre</a></div>
+        </div>
+      </div>
+      <!-- end of menu -->
+
+      <!-- start of genre -->
+      <div class="center genreCenter">
+        <div class="genre-section">
+          <div class="action">
+            <div class="actBtn">
+              <a href="#" class="act">Action</a>
+            </div>
+            <div class="action-contents" id="actionSlide"></div>
+          </div>
+
+          <div class="romance">
+            <div class="roBtn">
+              <a href="#" class="ro">Romance</a>
+            </div>
+            <div class="romance-contents" id="romanceSlide"></div>
+          </div>
+
+          <div class="drama">
+            <div class="drBtn">
+              <a href="#" class="dr">Drama</a>
+            </div>
+            <div class="drama-contents" id="dramaSlide"></div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="plugin/lightslider.js"></script>
+      <script src="js/genre.js"></script>
+    </div>
+  </body>
+</html>

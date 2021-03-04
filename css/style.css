@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
 body {
-  _background-image: url(https://obj-sg.thewiki.kr/data/4865726d696f6e6520616e642068657220506174726f6e75732e676966.gif);
+  background-image: url(https://data.whicdn.com/images/278701843/original.gif);
+  /* background-image: url("https://lh3.googleusercontent.com/proxy/6aeFbMP_xQ8AKuvL7PeAQSg2eBAiIw_M0xdM-Vr0MHgWFR_e2M0qsAjdU6pD8wss6JRyIs477EgmJCE9IKbPOUTJbekB_s00SlTZuMTQh2sDVoQd-kw9AMpVOmCPBPs7mpjbEua2duwTyzhVThtVve0TGCrTf1ErdY3on82O2RZ5FVEY5M0pNdC1J3kN1h84q_i_jhPf-LacI_mDOXGvaydVl3BfmThyJ0gTIu8kcwClz6BuCpaNHUAD7VG_r6p0r4PpwefR4oFITQdNnd-vaPOREo8IenSYsxRbBO2bA5iDTckhU9vfqbENrXvirenP889iHM-8hRs"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,7 +18,7 @@ html {
 
 /* header style? */
 .header {
-  background-color: rgba(107, 92, 103, 0.6);
+  background-color: rgba(233, 136, 204, 0.3);
   display: flex;
 }
 .header .headCenter {
@@ -55,15 +56,15 @@ html {
 .search-box .searchInput {
   font-size: 25px;
   margin: 5px;
-  border: 2px solid rgb(180, 171, 175);
+  border: 2px solid rgb(211, 140, 172);
   padding: 10px 350px 10px 10px;
   border-radius: 8px;
 }
 .search-box .sendBtn {
   font-size: 25px;
   padding: 10px 20px 10px 20px;
-  border: 2px solid rgb(180, 171, 175);
-  background-color: rgb(180, 171, 175);
+  border: 2px solid rgb(211, 140, 172);
+  background-color: rgb(211, 140, 172);
   color: #fff;
   border-radius: 8px;
 }
@@ -74,17 +75,38 @@ html {
 .search-box .searchInput::placeholder {
   color: #ddd;
 }
-.tit {
-  text-align: center;
-  font-family: "Lobster";
-  font-size: 40px;
-  background-color: rgba(107, 92, 103, 0.6);
-  padding: 10px;
-  text-align: center;
-  color: rgb(214, 50, 126);
-  border: 2px solid rgb(107, 92, 103);
-  margin: 20% 0 5%;
+.menu {
+  background-color: rgba(226, 117, 212, 0.5);
+
+  display: flex;
 }
+.menu .menuCenter {
+  display: flex;
+  font-size: 40px;
+  padding: 20px;
+  justify-content: space-between;
+}
+.menu .menuCenter a:hover,
+.menu .menuCenter .recentNav .active {
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 23px 18px 22px;
+}
+
+.menu .menuCenter .recentNav a {
+  color: rgb(214, 50, 126);
+  font-family: "Lobster";
+}
+.menu .menuCenter .best a {
+  color: rgb(214, 50, 126);
+  font-family: "Lobster";
+}
+.menu .menuCenter .genre a {
+  color: rgb(214, 50, 126);
+  font-family: "Lobster";
+  padding: 23px 18px 22px;
+}
+
 .clear:after {
   display: block;
   clear: both;
@@ -100,8 +122,8 @@ html {
 .recent-movie-wrap {
   float: left;
   width: 30%;
-  border: 3px solid rgb(107, 92, 103);
-  margin: 0 10px 5%;
+  border: 3px solid rgb(255, 255, 255);
+  margin: 30px 10px 5%;
 }
 .recent-movie-wrap:hover {
   background-color: rgb(235, 135, 182);
@@ -112,16 +134,16 @@ html {
   width: 100%;
 }
 .recent-movie-wrap h3 {
-  font-size: 30px;
+  font-size: 40px;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
   text-align: center;
   padding: 10px;
-  background-color: rgba(107, 92, 103, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   font-family: "Gamja Flower";
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .numContainer {
   width: 100%;
@@ -132,14 +154,14 @@ html {
 .numBtns {
 }
 .numBtns button {
-  font-size: 28px;
+  font-size: 30px;
   font-family: "Gamja Flower";
   margin: 20px;
   padding: 15px;
-  background-color: rgb(180, 171, 175);
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: black;
   border-radius: 20px;
-  border: 1px solid rgba(179, 212, 241, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 .numBtns button:hover {
   background-color: rgb(167, 108, 108);
@@ -147,7 +169,7 @@ html {
 }
 .numBtns button.active,
 .numBtns button.arrow {
-  background: rgb(167, 108, 108);
+  background: rgb(211, 140, 172);
   color: #fff;
 }
 .loading {

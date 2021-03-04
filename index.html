@@ -19,6 +19,7 @@
     <!-- CSS Style Link -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="plugin/lightslider.css" /> -->
   </head>
   <body>
     <div class="wrap">
@@ -60,23 +61,37 @@
       </div>
       <!-- end of scBoxCenter -->
 
-      <div class="recentTit">
-        <div class="tit">Recent</div>
+      <div class="menu">
+        <div class="center menuCenter">
+          <div class="recentNav">
+            <a href="index.html" class="active">Recent</a>
+          </div>
+          <div class="best"><a href="#">Best</a></div>
+          <div class="genre"><a href="genre.html">Genre</a></div>
+        </div>
       </div>
 
       <div class="center catainCenter">
+        <!-- loading img -->
+        <div class="loading">
+          <img src="img/loading.gif" alt="" />
+        </div>
         <div class="container"></div>
         <!-- end of container÷ -->
 
         <div class="numContainer">
           <div class="numBtns">
-            <button type="button" class="prev arrow">prev</button>
+            <button type="button" class="prev arrow">
+              <i class="fa fa-angle-double-left"></i>
+            </button>
             <button type="button" class="pageNum" value="1">1</button>
             <button type="button" class="pageNum" value="2">2</button>
             <button type="button" class="pageNum" value="3">3</button>
             <button type="button" class="pageNum" value="4">4</button>
             <button type="button" class="pageNum" value="5">5</button>
-            <button type="button" class="next arrow">next</button>
+            <button type="button" class="next arrow">
+              <i class="fa fa-angle-double-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -108,6 +123,6 @@
       });
     </script>
     <script src="js/recent.js"></script>
-    <!-- <script src="js/slider.js"></script> -->
+    <!-- <script src="js/genre.js"></script> -->
   </body>
 </html>
