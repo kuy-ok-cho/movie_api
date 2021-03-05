@@ -62,7 +62,7 @@
                 $.each(obj.items, function (i, item) {
                   // console.log(item.title);
                   let itemHTML = `<div class="movie_box">
-                              <img src="${item.image}" alt="" />
+                              <img src="${item.image}" alt="" onError="this.src='/movie_api/img/no-image.png';"/>
                               <h2>제목 :${item.title}</h2>
                               <p>감독 :${item.director}</p>
                               <p>개봉 :${item.pubDate}</p>

@@ -6,7 +6,7 @@ $(function () {
     let getDatas = [];
     $.ajax({
       url:
-        "https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc&limit=9&page=" +
+        "https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc&limit=15&page=" +
         page,
       success: function (data) {
         //console.log(data.data.movies[0].title);
@@ -17,7 +17,7 @@ $(function () {
           let recentHTML = `<div class="recent-movie-wrap">
                             <div class="recent-movies">
                               <div class="movie-img">
-                                <img src="${data.data.movies[i].medium_cover_image}" alt="" />
+                                <img src="${data.data.movies[i].medium_cover_image}" alt=""  onError="this.src='/movie_api/img/no-iamge.png';"/>
                               </div>
                               <h3 class="movie-title">
                                 ${data.data.movies[i].title}
@@ -81,3 +81,13 @@ $(function () {
 //     autoplaySpeed: 2000,
 //   });
 // }
+
+$(window).scroll(function () {
+  let scroll = $(this).scrollTop();
+
+  if (scroll < 200) {
+    $(".numContainer").hide();
+  } else {
+    $(".numContainer").show();
+  }
+});

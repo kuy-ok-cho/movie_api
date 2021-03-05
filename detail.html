@@ -4,23 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Movie App</title>
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- jquery -->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/best.css" />
+
+    <!-- <link rel="stylesheet" href="plugin/lightslider.css" /> -->
   </head>
   <body>
-    <h1>Detail</h1>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        let detailID = document.location.href.split("=")[1];
-        //console.log(detailID);
+    <div class="wrap">
+      <!-- start header -->
+      <div class="header">
+        <!-- start headeCenter -->
+        <div class="center headCenter">
+          <div class="leftHeader">
+            <a href="index.html"><em> Movie Search</em> </a>
+          </div>
+          <!-- end of left header -->
 
-        $.ajax({
-          url: "https://yts.mx/api/v2/movie_details.json?movie_id=" + detailID,
-          success: function (detailData) {
-            console.log(detailData);
-          },
-        });
-      });
-    </script>
+          <div class="rightHeader">
+            <ul class="member">
+              <a href="#"><li>Login</li></a>
+              <a href="#"><li>Join</li></a>
+            </ul>
+          </div>
+          <!-- end of rightHeader -->
+        </div>
+        <!-- end of headCenter -->
+      </div>
+      <!-- end of header -->
+
+      <div class="center scBoxCenter">
+        <!-- start of search-box -->
+        <div class="search-box">
+          <!-- start of search -->
+          <div class="search">
+            <input type="text" / class="searchInput"
+            placeholder="검색어를입력해주세요.">
+            <button type="button" class="sendBtn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <!-- end of search-->
+        </div>
+        <!-- end of search-box -->
+      </div>
+      <!-- end of scBoxCenter -->
+
+      <section class="main detailMain">
+        <div class="center">
+          <div class="items clear">
+            <div class="item-sizer"></div>
+            <div class="item">
+              <div>
+                <div class="show-more">
+                  <a href="${item.link}"><i class="fa fa-search"></i></a>
+                </div>
+                <div class="img-box">
+                  <img src="img/bando.jpg" alt="" />
+                </div>
+                <div class="item-txt">
+                  <h2>${item.title}</h2>
+                  <p>감독 : ${item.director}</p>
+                  <p>주연 : ${item.actor}</p>
+                  <p>개봉 : ${item.pubDate}</p>
+                  <p>평점 : ${item.userRating}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+      <script src="/movie_app/js/search.js"></script>
+      <!-- 
+      <?php include $_SERVER['DOCUMENT_ROOT'].'/movie_app/include/footer.php'; ?> -->
+    </div>
   </body>
 </html>

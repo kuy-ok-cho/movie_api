@@ -1,0 +1,41 @@
+.menu .menuCenter a:hover,
+.menu .menuCenter .best .active {
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 23px 18px 22px;
+}
+
+.container2 {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 980px;
+  flex-wrap: wrap;
+}
+
+.best-movie-wrap {
+  float: left;
+  width: 15%;
+  border: 3px solid rgb(255, 255, 255);
+  margin: 30px 10px 5%;
+}
+.best-movie-wrap:hover {
+  background-color: rgb(235, 135, 182);
+}
+.best-movies {
+}
+.best-movie-wrap img {
+  width: 100%;
+}
+.best-movie-wrap h3 {
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: "Gamja Flower";
+  color: rgb(0, 0, 0);
+}

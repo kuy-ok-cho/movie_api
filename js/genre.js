@@ -13,7 +13,7 @@ $(function () {
           <a href="detail.html?id=${data.data.movies[i].id}">
                               <div class=slideImg>
                               
-                                <img src="${data.data.movies[i].medium_cover_image}" alt="" />
+                                <img src="${data.data.movies[i].medium_cover_image}" alt="" onError="this.src='img/no-image.png';"/>
                                 <span class="outline">
                                 <i class="fa fa-search">
                                 </i>
