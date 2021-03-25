@@ -19,7 +19,9 @@
     <!-- CSS Style Link -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/best.css" />
     <link rel="stylesheet" href="css/canvas.css" />
+
     <!-- <link rel="stylesheet" href="plugin/lightslider.css" /> -->
   </head>
   <body>
@@ -44,7 +46,8 @@
         <!-- end of headCenter -->
       </div>
       <!-- end of header -->
-<canvas></canvas>
+      <canvas></canvas>
+
       <div class="center scBoxCenter">
         <!-- start of search-box -->
         <div class="search-box">
@@ -65,9 +68,9 @@
       <div class="menu">
         <div class="center menuCenter">
           <div class="recentNav">
-            <a href="index.html" class="active">Recent</a>
+            <a href="index.html">Recent</a>
           </div>
-          <div class="best"><a href="best.html">Best</a></div>
+          <div class="best"><a href="best.html" class="active">Best</a></div>
           <div class="genre"><a href="genre.html">Genre</a></div>
         </div>
       </div>
@@ -77,37 +80,31 @@
         <div class="loading">
           <img src="img/loading.gif" alt="" />
         </div>
-        <div class="container"></div>
+        <div class="container2"></div>
         <!-- end of container÷ -->
 
-
         <div class="numContainer">
-
           <div class="numBtns">
-              <button type="button" class="prev arrow">
-                <i class="fa fa-angle-double-left"></i>
-
-              <button type="button" class="pageNum" value="1">1</button>
-              <button type="button" class="pageNum" value="2">2</button>
-              <button type="button" class="pageNum" value="3">3</button>
-              <button type="button" class="pageNum" value="4">4</button>       
-              <button type="button" class="pageNum" value="5">5</button>
-              <button type="button" class="next arrow">
-                <i class="fa fa-angle-double-right"></i>
-              </button>
-
-
-
+            <button type="button" class="prev arrow">
+              <i class="fa fa-angle-double-left"></i>
+            </button>
+            <button type="button" class="pageNum" value="1">1</button>
+            <button type="button" class="pageNum" value="2">2</button>
+            <button type="button" class="pageNum" value="3">3</button>
+            <button type="button" class="pageNum" value="4">4</button>
+            <!-- <button type="button" class="pageNum" value="5">5</button> -->
+            <button type="button" class="next arrow">
+              <i class="fa fa-angle-double-right"></i>
+            </button>
           </div>
-          <!-- end of numBtns -->
         </div>
-        <!-- end of numContainer -->
-
       </div>
       <!-- end of center -->
     </div>
     <!-- end of wrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- search script -->
     <script>
       $(function () {
         function searchMovie() {
@@ -131,14 +128,11 @@
         });
       });
     </script>
-
     <!-- canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
-
-
+    <script src="js/best.js"></script>
     <script src="js/recent.js"></script>
     <script src="js/canvas.js"></script>
-    <!-- <script src="js/genre.js"></script> -->
   </body>
 </html>
