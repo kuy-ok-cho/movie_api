@@ -20,3 +20,5 @@
 >Light slider 
 
 
+자세히 보기
+http://hah0573.dothome.co.kr/movie_api/
